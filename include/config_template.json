@@ -13,29 +13,27 @@
   },
   "meter": [
     {
-      "usemeter": false,
-      "metertype": "S0",
-      "price": 0,
-      "intpin": 0,
-      "kwhimp": 1000,
-      "implen": 30,
+      "usemeter": true,
+      "metertype": "SDM630",
+      "price": 30,
+      "kwhimp": 0,
+      "implen": 0,
       "meterphase": 1,
       "factor": 1
     }
   ],
   "rfid": {
-    "userfid": false,
-    "sspin": 15,
+    "userfid": true,
     "rfidgain": 32
   },
   "ntp": {
+    "ntpip": "pool.ntp.org",
     "timezone": 1,
-    "ntpip": "pool.ntp.org"
+    "dst": false
   },
   "button": [
     {
-      "usebutton": false,
-      "buttonpin": 2
+      "usebutton": true
     }
   ],
   "system": {
@@ -44,16 +42,22 @@
     "wsauth": true,
     "debug": false,
     "maxinstall": 16,
+    "logging": true,
+    "api": false,
     "evsecount": 1
   },
   "evse": [
     {
       "mbid": 1,
       "alwaysactive": false,
-      "disableled": false,
-      "resetcurrentaftercharge": true,
+      "remote": false,
+      "ledconfig": 2,
+      "drotation": 0,
+      "resetcurrentaftercharge": false,
       "evseinstall": 16,
-      "avgconsumption": 15
+      "avgconsumption": 15,
+      "rseactive": false,
+      "rsevalue": 80
     }
   ]
 }
